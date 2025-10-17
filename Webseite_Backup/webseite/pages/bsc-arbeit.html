@@ -1,0 +1,145 @@
+<h1>Meine BSc-Arbeit</h1>
+
+<p>
+    Ziel meines BSc-Projekts war es, den Promotor der Alkoholdehydrogenase 4 (ADH4) in 
+    <em>Acetobacterium woodii</em> auszutauschen, um das Bakterium in die Lage zu versetzen, 
+    2,3-Butandiol zu 2-Butanol zu reduzieren. Zu diesem Zweck wurde der native Promotor der 
+    <em>adh4</em> durch den <em>pta</em>-Promotor aus <em>Clostridium ljungdahlii</em> ersetzt. 
+    Die hierfür benötigten genetischen Elemente umfassten die homologen Bereiche (left and right 
+    homology arms, LHA und RHA), die beide aus dem Genom von <em>A. woodii</em> stammen. Zusätzlich 
+    wurde versucht, den <em>RSO5</em>-Promotor aus <em>A. woodii</em> als alternative 
+    Promotorsequenz für <em>adh4</em> zu integrieren, was jedoch nicht den gewünschten Erfolg brachte.
+</p>
+
+<h2>Austausch des Promotors</h2>
+
+<p>
+    Der erste Projektschritt bestand in der Konstruktion der Spacer 1 und 2, die als Zielsequenzen 
+    in der Guide-RNA (gRNA) des CRISPR/Cas-Systems fungieren und die genomischen Schnittstellen 
+    für die Cas-Nuklease definieren. Dazu wurden jeweils zwei komplementäre Primer über ein 
+    Temperaturprogramm hybridisiert und anschließend mithilfe von Golden Gate Cloning in ein 
+    geeignetes Plasmid kloniert.
+</p>
+
+<p>
+    Nach der Konstruktion der Spacer-Plasmide erfolgte die Transformation in <em>E. coli</em>. 
+    Die ausgestrichenen Platten lieferten Kolonien, die in Übernachtkulturen kultiviert wurden. 
+    Aus diesen wurden Plasmide mittels Minipräparation isoliert. Eine anschließende PCR sowie 
+    Sequenzierung dienten der Überprüfung der korrekten Klonierung. Nur beim Spacer-2-Plasmid 
+    konnte die erwartete Sequenz bestätigt werden.
+</p>
+
+<p>
+    Im nächsten Schritt wurden der <em>pta</em>-Promotor sowie der <em>RSO5</em>-Promotor jeweils separat in das 
+    Spacer-2-Plasmid integriert. Dabei enthielten die eingesetzten DNA-Fragmente links- und rechts-homologe Bereiche 
+    (<strong>LHA</strong> und <strong>RHA</strong>) aus dem Genom von <em>Acetobacterium woodii</em>, die eine gezielte 
+    homologe Rekombination ermöglichten. Auch hierfür wurde Golden Gate Cloning verwendet, gefolgt von 
+    einer erneuten Transformation in <em>E. coli</em>. Die erfolgreiche Integration des 
+    <em>pta</em>-Promotors wurde durch PCR und Sequenzierung bestätigt. Bei der Integration 
+    des <em>RSO5</em>-Promotors trat hingegen eine unerwünschte Mutation innerhalb der 
+    <em>adh4</em>-Sequenz auf, wodurch dieser Ansatz verworfen wurde.
+</p>
+
+<p>
+    Anschließend wurde das rekombinante Plasmid mit <em>pta</em>-Promotor, das durch Midipräparation 
+    aus einer Übernachtkultur gewonnen wurde, zusammen mit dem CRISPR/Cas-System in den Wildtyp 
+    (TU2.0) sowie den Knockout-Stamm (Δaco1) von <em>Acetobacterium woodii</em> transformiert. 
+    Die Transformation erfolgte mittels Elektroporation nach einem etablierten Protokoll. Das 
+    CRISPR/Cas-System erzeugt einen gezielten DNA-Doppelstrangbruch an der durch die Guide-RNA 
+    definierten Stelle im Genom, wodurch die Zelle zur Reparatur durch homologe Rekombination 
+    mit dem bereitgestellten Plasmid angeregt wird. So wird der <em>pta</em>-Promotor gezielt an 
+    der gewünschten Stelle im Genom eingefügt. Die Zellen wurden auf Platten ausgestrichen und 
+    über einen Zeitraum von zwölf Tagen unter geeigneten Bedingungen kultiviert. Nach der Inkubation 
+    wurden Kolonien, die den <em>pta</em>-Promotor integriert hatten, mittels PCR überprüft. 
+    Erfolgreiche Klone wurden sequenziert, um die korrekte Integration zu bestätigen.
+</p>
+
+
+<p>
+    Die bestätigten Klone wurden anschließend in Wellplatten ohne Antibiotika kultiviert, um die 
+    Resistenzmarker zu eliminieren und stabile Kulturen zu erhalten. Eine abschließende PCR und Sequenzierung bestätigte 
+    das Fehlen nicht transformierter Wildtyp-Zellen. Somit standen reine Kulturen der 
+    <em>pta</em>-Stämme zur Verfügung, mit denen die abschließenden ADH4-Funktionstests durchgeführt wurden.
+</p>
+
+<h2>ADH4-Funktionstests</h2>
+
+<p>
+    Zur funktionellen Überprüfung wurden ADH4-Tests sowohl mit dem Wildtyp als auch mit dem 
+    Knockout-Stamm durchgeführt. Dabei wurde die Umwandlung von 2,3-Butandiol zu 2-Butanol unter 
+    verschiedenen Substratkonditionen untersucht. Es wurden zwei Arten von Ansätzen getestet:
+    Triplets (2,3-Butandiol / 2,3-Butandiol + Methanol) sowie Dupletts 
+    (2,3-Butandiol + Ethylenglycol / 2,3-Butandiol + 1,2-Propandiol). Die Konzentrationen von 
+    Substraten und Produkten wurden mithilfe von HPLC analysiert. Zusätzlich wurde das 
+    Zellwachstum über OD<sub>600</sub>- bzw. OD<sub>660</sub>-Messungen überwacht.
+</p>
+
+<p>
+    Dieselben Messungen wurden auch mit den transformierten <em>pta</em>-Stämmen durchgeführt. 
+    Während die Zusammensetzung der Triplet-Ansätze unverändert blieb, wurde das Duplett-Schema 
+    angepasst: Es wurden Versuche mit 2,3-Butandiol, 2,3-Butandiol + Methanol sowie 
+    2-Butanon + 1,2-Propandiol durchgeführt. Zusätzlich wurde die zuvor eingesetzte 
+    Stickstoffatmosphäre durch Wasserstoff ersetzt, um das Redoxgleichgewicht zugunsten der 
+    2-Butanolproduktion zu verschieben.
+</p>
+
+<h2>Bilder aus dem Labor</h2>
+<div class="galerie">
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/clc.PNG" onclick="zeigeLightbox('grafiken/bsc-projekt/clc.PNG')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240923_150029.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240923_150029.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240925_102347_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240925_102347_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240925_102355_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240925_102355_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240925_103016.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240925_103016.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240925_130343_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240925_130343_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20240925_151801.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20240925_151801.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241003_155904_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241003_155904_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241014_171727_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241014_171727_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241015_114350.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241015_114350.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241015_135444_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241015_135444_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241017_110603.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241017_110603.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241029_144747_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241029_144747_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241030_12285.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241030_12285.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241105_102603_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241105_102603_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241111_121211_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241111_121211_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/IMG_20241120_093133_1.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/IMG_20241120_093133_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/Screenshot_2025-02-25_17-51-19.png" onclick="zeigeLightbox('grafiken/bsc-projekt/Screenshot_2025-02-25_17-51-19.png')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/bsc-projekt/signal-2024-10-15-14-08-15-198.jpg" onclick="zeigeLightbox('grafiken/bsc-projekt/signal-2024-10-15-14-08-15-198.jpg')">
+    </div>
+</div>

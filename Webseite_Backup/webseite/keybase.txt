@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sheepfreak
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://sheepfreak.freeddns.org
+  * I am sheepfreak (https://keybase.io/sheepfreak) on keybase.
+  * I have a public key ASBwFS_y5yyFTAl-3yrTAkCpQ_HMrtVo38c-0vmXEVTZlQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012070152ff2e72c854c097edf2ad30240a943f1ccaed568dfc73ed2f9971154d9950a",
+      "host": "keybase.io",
+      "kid": "012070152ff2e72c854c097edf2ad30240a943f1ccaed568dfc73ed2f9971154d9950a",
+      "uid": "1f4e5273590f8e52246f9c049b788b19",
+      "username": "sheepfreak"
+    },
+    "merkle_root": {
+      "ctime": 1747434644,
+      "hash": "239da249c3ce382d4b06c208967e22b66f1eca9cd607493aad9e061aeed3e9e1dc51d6484d676c44bb43decaaa00c4607eb30e5d49bc324f05ff56520b871fbb",
+      "hash_meta": "c48a749db497c6b97fba77ffe932e6b2d3c1d164a1e7b14648cf3e794f770d1b",
+      "seqno": 26801284
+    },
+    "service": {
+      "entropy": "qreO1O24mQbRpNwiwO+QfRIs",
+      "hostname": "sheepfreak.freeddns.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.5.1"
+  },
+  "ctime": 1747434704,
+  "expire_in": 504576000,
+  "prev": "18537226cb471d75623095aa3e94723c65eb4340c6310f04f57c7b1342c52c76",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgcBUv8ucshUwJft8q0wJAqUPxzK7VaN/HPtL5lxFU2ZUKp3BheWxvYWTESpcCBMQgGFNyJstHHXViMJWqPpRyPGXrQ0DGMQ8E9Xx7E0LFLHbEIIiB6+82hHc8JhSFTFO9aOWfJchob41lHZ8VzXuV8lcAAgHCo3NpZ8RACeKVDi5JosMkDiUiMNUV0PoOCJJDp9Y+Cz1nSucuxfpbSzm3n90goRbLMqWuPKkUsWs0824kX3s6ogmohFNSC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMCfMaMizdtGLnuoi17W78kXZKh6D2dAgVNZ+ls46nkRo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sheepfreak
+
+==================================================================

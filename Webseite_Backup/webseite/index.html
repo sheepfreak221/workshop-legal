@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title>The Web of Madness</title>
+   	<link rel="stylesheet" href="css/style.css">
+   	<script defer src="js/loader.js"></script>
+</head>
+<body>
+
+<!--
+#################################################################
+#                                                               #
+#     \\     \\    /  /      /  /     //  /      \\\\   #	    #
+#      #   / /  # /   / #    / /      / /    /  #   /   \  # 	#
+#    #  / #  /  /    / /   /   # /    / /     / #     #   #  	# 
+#    \\/    # /   / / / /   //   #   / / / #         \\\\ #		#
+#                                                             	#
+#   Ich räume den Code irgendwann auf. Versprochen... nicht :P  #
+#																#
+#	 Ok... ich habe ihn aufgeräumt! wer das liest ist doof :P   #
+#                                                             	#
+#################################################################
+-->
+
+	<div class="buttons">
+   	<button onclick="showHome()">Home</button>
+    	<button onclick="showSection('faq')">FAQ</button>
+		<button onclick="showSection('hobbys')">Hobbys</button>   
+      	<!--<button onclick="showSection('ai-art')">AI-Art</button>   
+      	<button onclick="showSection('musik')">Musik</button>  -->
+      	<button onclick="showSection('downloads')">Downloads</button>
+      	<button onclick="showSection('listen')">Links</button>
+      	<!-- <button onclick="showSection('computer')">Computer</button> -->
+      	<button onclick="showSection('bsc-arbeit')">BSc-Arbeit</button>
+      	<button onclick="showSection('spiele')">Spiele</button>
+		<!--<button onclick="window.open('https://blog.sheepfreak.freeddns.org', '_blank')">Blog</button>-->      	
+		<button onclick="showSection('projekte')">Projekte</button>
+    </div>
+    
+	<div class="links">
+		<p>Meine Ecken im Internet:
+		  <a href="https://pixelfed.social/sheepfreak" target="_blank" rel="noopener">Pixelfed</a> |
+		  <a href="https://wien.rocks/@sheeptastic" target="_blank" rel="noopener">Mastodon</a> |
+		  <a href="https://flic.kr/ps/KJj2G" target="_blank" rel="noopener">Flickr</a> |
+		  <a href="https://www.youtube.com/@moorhuhn559" target="_blank" rel="noopener">YouTube</a> | 
+		  <a href="https://github.com/sheepfreak221" target="_blank" rel="noopener">GitHub</a> |         
+		  <a href="https://steamcommunity.com/profiles/76561197975424384/" target="_blank" rel="noopener">Steam</a>
+		</p>
+	</div>
+    
+    <div class="container">
+    	<div id="home" class="section" style="display: block;">
+			<h1 id="greeting">Hallo</h1>
+			<p class="translation" id="translation">So sagt man Hallo in dieser Sprache</p>
+    		<script src="js/greeting.js"></script>
+  			<p><strong>Hi, ich bin Tξd7ßθL4zΡ (Name der Redaktion bekannt) und willkommen im Chaos!</strong></p>
+
+			<p>Ich mag Technik, KI-Experimente, Fotografie, Metal und Horror-Games – also warum nicht alles auf einer Seite vereinen? HTML, CSS, JavaScript und Python sollen nicht einrosten, also bastle ich hier ein bisschen rum.</p>
+			
+			
+			<p>Für die, die’s interessiert: Diese Seite setzt übrigens auch standardkonforme Header für alternative Zugangswege ein.</p>
+
+			<!--
+
+				curl -I https://sheepfreak.freeddns.org | grep -i onion-location
+  				% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 				Dload  Upload   Total   Spent    Left  Speed
+  				0  6846    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+				Onion-Location: http://laboqld6kynunyn2dvajjw2comasqixokmauutu5aqpwbwf3jbpzyeqd.onion
+
+			-->
+
+			<p>Diese Seite läuft auf einem Raspberry Pi 1 – pure Nostalgie und fragwürdige Performance. Sollte die Performance unerwartet okay sein, ignoriere es einfach. Magie oder so. Falls du DDoS-Vibes verspürst – spar’s dir, das Ding fällt eh schneller um als mein Router.</p> 
+
+			<p>Der Pi hostet übrigens mehr als nur diese Seite:</p>
+			<ul>
+			  <li>
+				<a href="https://ascii.sheepfreak.freeddns.org" target="_blank" rel="noopener">
+				  ASCII Arcade
+				</a> – ein wildes Sammelsurium aus Telnet-Nostalgie und anderem Unfug.
+			  </li>
+			  <li>
+				<a href="https://blog.sheepfreak.freeddns.org" target="_blank" rel="noopener">
+				  Mein Blog
+				</a> – mein Ort für Gedanken und was mir sonst so durch den Kopf geht.
+			  </li>
+			</ul>
+			<p>Alles auf einem einzigen Raspberry, alles ein bisschen janky, aber hey… es lebt!</p>
+			
+			<p>Willst du sehen, ob die Himbeere noch atmet? Check den Sysmonitor unten!</p>
+
+			<p>Ach ja, hier gibt es auch coolen Stuff zum Download, den man sonst kaum noch im Netz findet. Viel Spaß beim Stöbern!</p>
+
+			<div id="system-info">
+    			<div class="output-box" id="cpu">
+        			<span class="label">CPU:</span>
+        			<span class="value" id="cpu-model"></span>
+        			<span class="value" id="cpu-percentage"></span>
+        			<span class="value" id="cpu-max-freq"></span> 
+    			</div>
+    			<div class="output-box" id="ram">
+        			<span class="label">RAM:</span>
+        			<span class="value" id="ram-percentage"></span>
+        			<span class="value" id="total-ram"></span> 
+    			</div>
+    			<div class="output-box" id="osbox">
+        			<span class="label">Betriebssystem:</span>
+        			<span class="value" id="os"></span>
+    			</div>
+    			<div class="output-box" id="uptimebox">
+        			<span class="label">Uptime:</span>
+        			<span class="value" id="uptime"></span>
+    			</div>
+			</div>
+			
+	 		<script src="js/sysmonitor.js"></script>
+	 		
+			<h2>Unter der Haube</h2>
+			<strong>07.07.2025</strong> – Nach einem kurzen Stromausfall war der Server erstmals seit ~130 Tagen offline. Die Gelegenheit wurde für ein Systemupdate genutzt. Zudem starten die Flask-Apps nun automatisch als systemd-Dienste.
+		</div>
+             
+		<div id="faq" class="section" style="display: none;"></div>
+		<div id="ai-art" class="section" style="display: none;"></div>
+		<div id="musik" class="section" style="display: none;"></div>
+		<div id="downloads" class="section" style="display: none;"></div>
+		<div id="computer" class="section" style="display: none;"></div>
+		<div id="bsc-arbeit" class="section" style="display: none;"></div>
+		<div id="spiele" class="section" style="display: none;"></div>
+		<div id="projekte" class="section" style="display: none;">
+
+    		<h1>Meine Projekte</h1>
+    		<ul class="auswahlliste">
+        		<li><a href="#" onclick="loadProject('gaming-handy')">Retro-Gaming-Handy</a></li>
+		  		<li><a href="#" onclick="loadProject('it-workshop')">IT-Workshop für Jugendliche</a></li>
+        		<li><a href="#" onclick="loadProject('raspberry-pi')">Raspberry Pi</a></li>
+				<li><a href="#" onclick="loadProject('gtx780')">GTX 780 BIOS-Mod</a></li>
+				<li><a href="#" onclick="loadProject('kinder-pc')">PC für die Kinder</a></li>
+    		</ul>
+    		
+    		<div id="projekt-inhalt"></div> <!-- Hier wird der Inhalt geladen -->
+    			
+		</div>
+		
+		<div id="listen" class="section" style="display: none;">
+    		<!-- <h1>Externe Links</h1> -->
+    		<ul class="auswahlliste">
+        		<li><a href="#" onclick="loadList('allgemein')">Allgemeine Links</a></li>
+		  		<li><a href="#" onclick="loadList('os-software')">Open-Source-Software</a></li>
+				<li><a href="#" onclick="loadList('cli-tools')">Coole CLI-Tools</a></li>
+    		</ul>
+    		
+    		<div id="listen-inhalt"></div> <!-- Hier wird der Inhalt geladen -->
+    			
+		</div>
+		<div id="hobbys" class="section" style="display: none;">
+    		<!--<h1>Dinge, die mir Spaß machen</h1>-->
+    		<ul class="auswahlliste">
+        		<li><a href="#" onclick="loadHobby('ai-art')">Ai-Art</a></li>
+		  		<li><a href="#" onclick="loadHobby('fotografie')">Fotografie</a></li>
+				<li><a href="#" onclick="loadHobby('music')">Musik</a></li>
+				<li><a href="#" onclick="loadHobby('computer')">Computer</a></li>
+
+			</ul>
+    		
+    		<div id="hobby-inhalt"></div> <!-- Hier wird der Inhalt geladen -->
+    			
+		</div>
+   </div>
+    
+
+	<script>
+   	function showHome() {
+      	document.getElementById("content").style.display = "none"; // Anderen Inhalt verstecken
+         document.getElementById("home").style.display = "block";  // Home wieder anzeigen
+      }
+   </script>
+
+<!--
+
+      |\      _,,,---,,_
+ZZZzz /,`.-'`'    -.  ;-;;,_
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_)  Felix Lee 
+
+
+-->
+
+	<div id="contact-links">
+		<p>Kontakt: 
+	  	<a href="https://signal.me/#eu/lse0aSD7KiL_c_5Qi1UkCMblsO8svUMRi3ObepCqKASAAZq_zeBIU6FI_6R5apyD" target="_blank" rel="noopener">Signal</a> |
+	  	<a href="mailto:sheepfreak@disroot.org">E-Mail</a> |
+	  	<a href="./downloads/sheepfreak_public.asc">PGP</a>
+		</p>
+	</div>
+
+</body>
+</html>

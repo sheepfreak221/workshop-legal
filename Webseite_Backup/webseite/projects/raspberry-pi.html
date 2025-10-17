@@ -1,0 +1,38 @@
+<h2>Mein Raspberry Pi 1: Ein kleines Wunderwerk</h2>
+
+<p>Diese Seite – inklusive aller Flask-Apps – läuft auf einem Raspberry Pi 1 aus dem Jahr 2012. Ja, richtig gehört: Ein winziger Einplatinenrechner mit einer ARM1176JZF-S CPU (Single-Core, 700–1000 MHz, ARMv6) und gerade mal 512 MB RAM stemmt das gesamte Projekt.</p>
+<p>Warum? Weil ich es kann!</p>
+<p>Und weil es Spaß macht, aus alter Hardware noch das Maximum herauszuholen.</p>
+<p>Aber das ist noch nicht alles! Der kleine Pi ist ein echtes Multitalent und übernimmt mehrere Aufgaben gleichzeitig:</p>
+<ul>
+    <li>Webserver mit Nginx – Übernimmt die Routenverwaltung und leitet Anfragen an die passenden Flask-Apps weiter</li>
+    <li>Flask-Apps – Die eigentlichen Webanwendungen laufen in separaten Prozessen und kommunizieren über Unix-Sockets mit Nginx</li>
+    <li>Fileserver mit Samba – Hauptsächlich für meine gerippten DVDs, die auf einer externen 2 TB Festplatte gespeichert sind, damit sie jederzeit verfügbar sind</li>
+    <li>Podcatcher mit Podget – Automatisches Abrufen von Podcasts</li>
+    <li>OpenVPN-Server – Für eine sichere Verbindung ins Heimnetz</li>
+    <li><s>Dynamisches DNS mit DuckDNS – Ein kleines Script auf dem Pi aktualisiert regelmäßig die IP-Adresse, damit die Seite jederzeit erreichbar bleibt</s></li>
+    <li>Megacmd – Zum Hochladen und Verwalten großer Dateien auf MEGA direkt vom Pi</li>
+    <li>Tor Hidden Service – Die Seite ist auch im Tor-Netz erreichbar, einfach für mehr Anonymität und Sicherheit</li>
+</ul>
+<p>Und das alles unter Debian Bookworm, optimiert für seine bescheidenen Ressourcen.</p>
+<p>Ein 13 Jahre (Stand 2025) alter Mini-Rechner, der heute noch als Server läuft – und das stabil!</p>
+
+<h2>Raspberry Pi 1 als Audiostation mit HiFi-Berry DAC</h2>
+<p>Für dieses Projekt dient ein Raspberry Pi 1 als zentrale Audiostation. Da dieses Modell noch keinen dedizierten Anschluss für einen HiFi-Berry DAC besitzt, wurde die Verbindung zwischen Pi und DAC direkt verlötet. Das ganze Setup steckt in einem schwarzen HiFiBerry-Gehäuse, das nicht nur Schutz bietet, sondern auch für eine elegante Optik sorgt.</p>
+
+<p>Die Musikwiedergabe läuft über den Music Player Daemon (MPD). Musikdateien werden per SMB vom NAS gestreamt, und auch Internetradiosender lassen sich abspielen. Wer möchte, kann mit Streamripper Radiostreams direkt aufzeichnen.</p>
+
+<p>Zusätzlich gibt es die Möglichkeit, Musik über DLNA und Bluetooth zu streamen. Da der Raspberry Pi 1 für PulseAudio zu schwach ist, übernimmt BlueALSA die Bluetooth-Verbindung. Eine Besonderheit: BlueALSA lauscht dauerhaft auf die MAC-Adresse meines Smartphones, sodass ausschließlich dieses Gerät als Audioquelle genutzt werden kann.</p>
+
+<p>Da der Raspberry Pi 1 kein integriertes WLAN besitzt, wird die Verbindung über einen externen WLAN-Adapter hergestellt.</p>
+
+<p>Gesteuert wird die Audiostation über die Smartphone-App MPDroid, was eine komfortable Bedienung ermöglicht.</p>
+
+<div class="galerie">
+    <div class="image-container">
+        <img src="grafiken/raspberrypi/661486295640686592_1.jpg" onclick="zeigeLightbox('grafiken/raspberrypi/661486295640686592_1.jpg')">
+    </div>
+    <div class="image-container">
+        <img src="grafiken/raspberrypi/661486295640686592_2.jpg" onclick="zeigeLightbox('grafiken/raspberrypi/661486295640686592_2.jpg')">
+    </div>
+</div>

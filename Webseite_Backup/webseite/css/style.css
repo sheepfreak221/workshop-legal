@@ -1,0 +1,446 @@
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../fonts/ibm-plex-sans-v21-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* lato-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* roboto-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v47-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+/* space-grotesk-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/space-grotesk-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* space-grotesk-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/space-grotesk-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  
+body {
+	font-family: 'Space Grotesk', Inter, Roboto, Lato, 'IBM Plex Sans', Arial, sans-serif;
+	background: #1a1b26;
+	color: #c0caf5;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+p {
+	text-align: justify;          
+	hyphens: auto;               
+	line-height: 1.6;             
+	word-spacing: 0.1em;          
+}    
+
+/* Buttons in der Navigationsleiste */
+
+.buttons {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+.buttons button {
+	background: #7aa2f7;
+	color: white;
+	border: none;
+	padding: 6px 12px;
+	border-radius: 4px; 
+	cursor: pointer;
+	font-size: 0.9em; 
+	transition: background 0.2s ease-in-out, transform 0.1s;
+}
+.buttons button:hover {
+	background: #5c7dcf; 
+	transform: scale(1.05); 
+}
+.buttons button:active {
+	transform: scale(0.95); 
+}
+
+/* Meine Ecken im Internet */
+
+.links {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+.links a {
+	color: #7aa2f7;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Hauptbereich der Seite */
+
+.container {
+	background: rgba(26, 27, 38, 0.8);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(12, 12, 18, 0.6);
+	max-width: 800px;
+	width: 100%;
+	text-align: left;
+}
+h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+.translation {
+	text-align: center;
+	font-size: 1.2em;
+	color: gray;
+}
+.section {
+	display: none;
+	text-align: left;
+}
+ul, ol {
+	text-align: justify;  
+	hyphens: auto;         
+	line-height: 1.6;      
+	padding-left: 40px;   
+}
+li {
+	margin-bottom: 5px;   
+}     
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+	background: #24283b;
+}
+th, td {
+	border: 1px solid #7aa2f7;
+	padding: 8px;
+	text-align: left;
+}
+th {
+	background-color: #7aa2f7;
+	color: #1a1b26;
+}
+a {
+	color: #7aa2f7;
+   text-decoration: none;
+   transition: color 0.2s ease-in-out;
+}
+a:hover {
+   color: #bb9af7;
+   text-decoration: underline;
+}
+img, video {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 100%;
+   height: auto;
+}
+
+
+/*
+
+
+
+                                       .--.
+                _______             .-"  .'
+        .---u"""       """"---._  ."    %
+      .'                        "--.    %
+ __.--'  o                          "".. "
+(____.                                  ":
+ `----.__                                 ".
+         `----------__                     ".
+               ".   . ""--.                 ".
+                 ". ". bIt ""-.              ".
+                   "-.)        ""-.           ".
+                                   "".         ".
+                                      "".       ".
+                                         "".      ".
+                                            "".    ".
+                      ^~^~^~^~^~^~^~^~^~^~^~^~^"".  "^~^~^~^~^
+                                            ^~^~^~^  ~^~
+                                                 ^~^~^~
+
+
+
+                                                 
+*/
+
+/* Der Sysmonitor */
+
+#system-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Flexible Spalten für das Raster */
+    gap: 20px;  
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    order: 1px solid #ccc;  
+    border-radius: 8px;
+}
+
+.output-box {
+    padding: 15px;
+    border: 1px solid gray; /*#7aa2f7;*/  
+    border-radius: 8px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.output-box .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.output-box .value {
+    margin: 5px 0;
+}
+
+#cpu, #ram, #osbox, #uptimebox {
+    margin-bottom: 10px;
+}
+
+#system-info p {
+    margin: 5px 0;
+}
+
+
+/*
+
+         (\/)
+          \/
+  (\/)   .-.  .-.
+   \/   ((`-)(-`))
+         \\    //   (\/)
+          \\  //     \/
+   .="""=._))((_.="""=.
+  /  .,   .'  '.   ,.  \
+ /__(,_.-'      '-._,)__\
+`    /|             |\   `
+    /_|__         __|_\
+      | `))     ((` |
+      |             |
+jgs  -"==         =="-
+
+
+*/
+
+/* Optionale Anpassung für kleinere Bildschirme */
+@media (max-width: 600px) {
+    #system-info {
+        padding: 15px;
+    }
+}
+
+/* Formatierung für die Open-Source-Linkliste */
+
+#os-linkliste h2 { 
+	cursor: pointer;
+}
+#os-linkliste h2:hover { 
+	color: #bb9af7; 
+}
+#os-linkliste p {
+	margin-left: 20px;
+}
+
+/* Die Liste zur Wahl der Hobbys, Links, Projekte */
+
+.auswahlliste {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;            
+    gap: 0.5rem 2rem; 
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .auswahlliste li a {
+    color: #7aa2f7;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    opacity: 0.8;;
+  }
+  
+  .auswahlliste li a:hover {
+    text-decoration: underline;
+    opacity: 1;
+    color: #bb9af7;
+    cursor: pointer;
+  }
+
+
+/* CSS für die Galerie (Bilder und Videos) inkl Lightbox*/
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.galerie img {
+  width: 100%;
+  height: 200px; /* Höhe auf 200px setzen, um quadratische Bilder zu erzeugen */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover; /* Bildfüllung, um das Seitenverhältnis zu wahren */
+}
+
+.galerie img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.galerie video.video-thumb {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.galerie video.video-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+  @media (max-width: 600px) {
+    #fotogalerie {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .lightbox-content img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: zoomIn 0.2s ease;
+  }
+
+  .lightbox-content video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: zoomIn 0.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.9) }
+    to { transform: scale(1) }
+  }
+
+
+
+
+
+/* Smartphone */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .buttons button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .links {
+        gap: 10px;
+    }
+
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gallery-thumbnails img {
+        width: 100px;
+    }
+
+    .video-gallery video {
+        width: 150px;
+    }
+
+    #lightbox img {
+        max-width: 90vw !important;
+        max-height: 80vh !important;
+    }
+
+    #video-lightbox video {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+}
+	

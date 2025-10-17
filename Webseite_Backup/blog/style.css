@@ -1,0 +1,223 @@
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/lato-v24-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/lato-v24-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+
+body {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  font-family: Lato, 'IBM Plex Sans', 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  hyphens: auto;
+}
+
+/* Container mit zwei Spalten */
+#container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Navigation links */
+nav#nav {
+  width: 250px; /* Feste Breite für die Navigation */
+  background-color: #313244;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100vh; /* Stellt sicher, dass die Navigation die volle Höhe des Containers hat */
+  flex-shrink: 0; /* Verhindert, dass die Navigation schrumpft */
+}
+
+/* Links in der Navigation */
+nav a {
+  display: block;
+  color: #cba6f7;
+  text-decoration: none;
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #45475a;
+}
+
+/* Hauptbereich */
+main#content {
+  flex-grow: 1; /* Nimmt den restlichen Raum ein */
+  padding: 2em;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  overflow-y: auto;
+  height: 100vh; /* Stellt sicher, dass der Inhalt den gesamten verfügbaren Raum nutzt */
+  box-sizing: border-box;
+  text-align: justify; /* Blocksatz für den Text */
+}
+
+/* Beiträge */
+section {
+  background-color: #313244;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(203, 166, 247, 0.2);
+}
+
+/* Überschriften */
+h1 {
+  color: #cba6f7;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #cba6f7; /* Rahmen unter der Überschrift */
+  padding-bottom: 0.5em; /* Etwas Abstand zwischen Text und Rahmen */
+}
+
+h2, h3, h4 {
+  color: #89b4fa;
+  margin-top: 0;
+}
+
+/* Notiztext */
+.note {
+  font-style: italic;
+  color: #f5c2e7;
+}
+
+/* Formeln oder spezieller Text */
+.formula {
+  background-color: #1e1e2e;
+  border-left: 3px solid #cba6f7;
+  padding-left: 1em;
+  margin: 1em 0;
+  font-family: 'Courier New', monospace;
+  color: #a6e3a1;
+}
+
+/* Sanfte Fade-In Animation */
+#content {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+#rss-footnote {
+  margin-top: 3em;
+  font-size: 0.9em;
+  color: #888;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+
+#rss-footnote a {
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  opacity: 0.8;
+}
+
+#rss-footnote a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  color: #cba6f7;
+}
+
+#content a {
+  color: #555;
+}
+
+#content a:hover {
+  color: #cba6f7;
+}
+/* Der cool1 style (es kotzt mich an xD) */
+/*
+.cool1 {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.6;
+  padding: 2rem;
+  margin: auto;
+}
+.cool1 h1, h2 {
+    color: #ff4081;
+    text-shadow: 1px 1px 3px #000;
+  }
+  
+.cool1 h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ff4081;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cool1   h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cool1 p {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-left: 4px solid #ff4081;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.2);
+  }
+  
+  .cool1 a {
+    color: #ff79c6;
+    text-decoration: none;
+  }
+  
+  .cool1 a:hover {
+    text-decoration: underline;
+    color: #f8f8f2;
+  }
+*/

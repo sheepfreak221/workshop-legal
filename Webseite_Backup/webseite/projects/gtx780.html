@@ -1,0 +1,36 @@
+    <h2>GTX 780 BIOS-Mod: VRAM-Defekt gefixt</h2>
+  
+    <p>
+      In meinem alten PC hatte ich eine NVIDIA GTX 780, die eigentlich noch gute Dienste leistete – 
+      wäre da nicht der defekte VRAM gewesen. Dank etwas Reverse Engineering und Recherche konnte ich die Karte 
+      aber per BIOS-Mod wieder funktionsfähig machen.
+    </p>
+  
+    <h3>Diagnose mit nvidia-mats</h3>
+    <p>
+      Zuerst habe ich mit dem Tool <code>nvidia-mats</code> die Speicherbänke der GPU getestet. 
+      Dabei kam heraus, dass Speicherbank D defekt war.
+    </p>
+  
+    <h3>Fix mit oldnvidiaartifacts</h3>
+    <p>
+      Ich bin dann auf das Tool <code>oldnvidiaartifacts</code> gestoßen, mit dem sich defekte Speicherbänke 
+      im BIOS deaktivieren lassen. Der Ablauf war wie folgt:
+    </p>
+    <ol>
+      <li>Ein BIOS-Backup der Karte erstellt</li>
+      <li>Die defekte Speicherbank im BIOS deaktiviert</li>
+      <li>Das modifizierte BIOS mit <code>nvflash</code> auf die Karte geschrieben</li>
+    </ol>
+    <p>
+      Die Karte lief danach wieder stabil, allerdings mit nur 2.5 GB statt der ursprünglichen 3 GB VRAM.
+    </p>
+  
+    <h3>Upgrade auf RX 570</h3>
+    <p>
+      Inzwischen wurde die GTX 780 durch eine gebrauchte RX 570 ersetzt. Der Grund: 
+      Der NVIDIA 470-Treiber wird unter Linux nicht mehr lange unterstützt, benötigt jetzt schon spezielle 
+      Boot-Parameter und wird vermutlich bald aus den Paketquellen verschwinden. 
+      AMD ist mit dem amdgpu-Treiber deutlich besser aufgestellt. 
+      Die gebrauchte RX 570 war günstig zu haben und läuft einwandfrei.
+    </p>  

@@ -1,0 +1,17 @@
+[
+  { "title": "Nerdige Gedankengänge", "file": "posts/nerdige_gedanken.html", "hash": "#gedankengang", "date": "2025-04-18" },
+  { "title": "Kindererziehung", "file": "posts/moderne_kindererziehung.html", "hash": "#kinder", "date": "2025-04-19" },
+  { "title": "Mein Neffe", "file": "posts/mein_neffe.html", "hash": "#neffe" , "date": "2025-06-01"},
+  { "title": "50 € für nix", "file": "posts/medienbildung.md", "hash": "#medien", "date": "2025-04-22" },
+  { "title": "Kuschelpädagogik", "file": "posts/kuschelpaedagogik.md", "hash": "#kuschel", "date": "2025-04-23" },
+  { "title": "Handyverbot", "file": "posts/handyimunterricht.md", "hash": "#handy", "date": "2025-04-18" },
+  { "title": "Katzen flüssig?", "file": "posts/katzen.md", "hash": "#katzen", "date": "2025-04-24" },
+  { "title": "Informatikunterricht", "file": "posts/infounterricht.md", "hash": "#info", "date": "2025-04-28" },
+  { "title": "Geldentwertung", "file": "posts/geldentwertung.md", "hash": "#geld", "date": "2025-06-05" },
+  { "title": "Essay (Neffe)", "file": "posts/essay_neffe.md", "hash": "#essay", "date": "2025-06-05" },
+  { "title": "Der Workshop", "file": "posts/workshop.md", "hash": "#workshop", "date": "2025-07-02" },
+  { "title": "Die Abschlussprüfung", "file": "posts/abschlusspruefung.md", "hash": "#abschluss", "date": "2025-07-10" },
+  { "title": "Kind der 90er", "file": "posts/kind90er.md", "hash": "#kind90er", "date": "2025-07-17" }
+
+]
+

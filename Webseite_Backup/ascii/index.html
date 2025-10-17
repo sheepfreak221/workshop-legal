@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>ASCII Arcade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: "Courier New", monospace;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      color: #0ff;
+    }
+    a {
+      color: #0ff;
+      text-decoration: underline;
+    }
+    .ascii {
+      white-space: pre;
+      font-size: 0.9rem;
+      color: #0a0;
+      margin-bottom: 2rem;
+    }
+    .download {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #222;
+      border: 1px solid #0f0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ASCII Arcade</h1>
+
+  <div class="ascii">
+     ___   _____ ______________   ___                        __   
+    /   | / ___// ____/  _/  _/  /   |  ______________ _____/ /__ 
+   / /| | \__ \/ /    / / / /   / /| | / ___/ ___/ __ `/ __  / _ \
+  / ___ |___/ / /____/ /_/ /   / ___ |/ /  / /__/ /_/ / /_/ /  __/
+ /_/  |_/____/\____/___/___/  /_/  |_/_/   \___/\__,_/\__,_/\___/ 
+ 
+  </div>
+
+  <section class="intro">
+    <p>
+      Die <strong>ASCII Arcade</strong> ist eine Sammlung retroinspirierter Minispiele, die komplett im Terminal laufen. 
+    </p>
+  
+    <p>
+      Ursprünglich war geplant, den Zugang über <code>telnet</code> zu realisieren – ganz im Stil früher Online-Systeme der 80er und 90er.
+      Doch so charmant die Idee war, stellte sich schnell ein Problem heraus: <strong>Telnet hat kein echtes Terminal-Konzept</strong>.  
+      Es fehlen wichtige Features wie Terminal Negotiation (z. B. <code>TERM</code>-Typen), Zeilenpufferung wird nicht zuverlässig gehandhabt, 
+      und Sondertasten (wie Pfeiltasten) funktionieren oft nur eingeschränkt oder gar nicht.
+    </p>
+  
+    <p>
+      Das führte dazu, dass Eingaben in Spielen entweder gar nicht erkannt wurden oder sich seltsam verhielten – eine akzeptable Steuerung 
+      war schlicht nicht möglich.
+    </p>
+  
+    <p>
+      Daher der Umstieg auf <strong>SSH</strong>: moderne Clients (z. B. <code>ssh</code>, PuTTY oder sogar VSCode Remote) unterstützen 
+      echte Terminalemulation, zuverlässige Zeicheneingabe und sichere Verbindungen – perfekt für eine smoothe Arcade-Session!
+    </p>
+
+    <p>
+      Aber das ist noch nicht alles: <strong>Ursprünglich war geplant, die gesamte Arcade ausschließlich über das Tor-Netzwerk zugänglich zu machen</strong> – 
+      genauer gesagt via <code>ssh</code> über meinen <code>.onion</code>-Service. Und ja: Es funktioniert technisch einwandfrei!
+    </p>
+    
+    <p>
+      Allerdings zeigte sich schnell, dass die <strong>hohe Latenz</strong> und das fehlende TCP-Tuning (Stichwort: <code>TCP_NODELAY</code> bzw. Nagle's Algorithmus) 
+      im Tor-Protokoll den Spielfluss massiv beeinträchtigen. Ergebnis: <em>Die Eingaben kamen mit merklicher Verzögerung an – und das war beim Zocken einfach nicht tragbar.</em>
+    </p>
+    
+    <p>
+      Deshalb läuft der <strong>Standardzugang jetzt ganz klassisch über SSH via clearnet</strong> – schnell, direkt und latenzarm.
+    </p>
+    
+    <p>
+      <strong>Aber für alle, die das ultimative Hacker-Feeling suchen oder einfach neugierig sind:</strong> Der .onion-Dienst ist weiterhin aktiv!  
+      Wer <code>torsocks</code> oder eine passende SSH-Konfiguration verwendet, kann sich auch anonym über das Tor-Netz verbinden.
+    </p>
+  
+    <p>
+      Nach dem Login wirst du in eine isolierte <code>chroot</code>-Umgebung auf meinem <strong>Raspberry Pi 1</strong> weitergeleitet. 
+      Dort begrüßt dich direkt ein minimalistisches ASCII-Menü zur Spielauswahl. Alles läuft in einer read-only Sandbox – sicher, nerdig, 
+      minimalistisch.
+    </p>
+  
+    <p><em>Press start to continue...</em> 🕹️</p>
+  </section>
+
+  <section>
+    <p>Telnet ist nicht tot – und Star Wars auch nicht.</p>
+  
+    <p>Wusstest du, dass es eine 20-minütige ASCII-Version von Star Wars Episode IV gibt? Retro vom Feinsten! Die Version ist frei verfügbar und ich stelle sie via Telnet über Tor zum Streamen bereit.</p>
+    <p>Aber Moment – warum über Tor?</p>
+  
+    <p>Ganz einfach: Ich mach bestimmt nicht noch einen Port auf! Der Dienst ist also nur über das Tor-Netzwerk verfügbar – anonym, nerdig und sicher. Die etwas höhere Latenz? Kein Problem – bei einem ASCII-Film trägt sie nur noch mehr zum authentischen Retro-Feeling bei. Fast wie früher mit GPRS – nur mit mehr Stil.</p>  
+    <p>Viel Spaß beim Filmschauen... Frame für Frame – so wie’s George Lucas damals sicher <em>nicht</em> geplant hat.</p>
+  
+    <p>📺✨ long live ascii.</p>
+  </section>
+  
+  <h2>Features</h2>
+  <ul>
+    <li>📜 Spieleklassiker wie Snake, Tetris und Pacman – in ASCII!</li>
+    <li>🔒 Kein GUI – pures Terminal-Feeling</li>
+    <li>👾 Kein Tracker, keine Cloud – nur FOSS und Spaß</li>
+  </ul>
+
+  <div class="download">
+    <h2>Download & Verbindung</h2>
+    <p>Um dich mit dem ASCII-Arcade-Server zu verbinden, benötigst du eine SSH-Zertifikatsdatei. Lade sie als ZIP-Datei herunter und entpacke sie, um die Datei <code>ascii_arcade_guest.pem</code> zu erhalten.</p>
+  
+    <p><strong>ZIP-Datei herunterladen:</strong><br>
+      <a href="./ascii_arcade_key.zip" download>ascii_arcade_key.zip</a>
+    </p>
+  
+    <h3>Linux / macOS (Bash)</h3>
+    <ol>
+      <li>ZIP-Datei herunterladen:<br>
+        <code>wget https://ascii.sheepfreak.freeddns.org/ascii_arcade_key.zip</code>
+      </li>
+      <li>ZIP-Datei entpacken:<br>
+        <code>unzip ascii_arcade_key.zip</code>
+      </li>
+      <li>Dateiberechtigung setzen:<br>
+        <code>chmod 600 ascii_arcade_guest.pem</code>
+      </li>
+      <li>Mit dem Server verbinden:<br>
+        <code>ssh -i ascii_arcade_guest.pem arcade@sheepfreak.freeddns.org -p 2222</code>
+      </li>
+    </ol>
+  
+    <h3>Windows (PowerShell)</h3>
+    <ol>
+      <li>ZIP-Datei herunterladen:<br>
+        <code>Invoke-WebRequest -Uri "https://ascii.sheepfreak.freeddns.org/ascii_arcade_key.zip" -OutFile "ascii_arcade_key.zip"</code>
+      </li>
+      <li>ZIP-Datei entpacken:<br>
+        Rechtsklick auf <code>ascii_arcade_key.zip</code> → „Alle extrahieren“<br>
+        (oder mit PowerShell:<br>
+        <code>Expand-Archive -Path "ascii_arcade_key.zip" -DestinationPath "."</code>)
+      </li>
+      <li>Zugriffsrechte für PEM-Datei setzen:<br>
+        <code>icacls ascii_arcade_guest.pem /inheritance:r</code><br>
+        <code>icacls ascii_arcade_guest.pem /grant:r "$($env:USERNAME):(R)"</code><br>
+        <code>icacls ascii_arcade_guest.pem /remove "Users"</code><br>
+        <code>icacls ascii_arcade_guest.pem /remove "Everyone"</code>
+      </li>
+      <li>Mit dem Server verbinden:<br>
+        <code>ssh -i .\ascii_arcade_guest.pem arcade@sheepfreak.freeddns.org -p 2222</code>
+      </li>
+    </ol>
+
+    <h3>StarShell über Telnet und Tor (Linux / macOS)</h3>
+<ol>
+  <li>Tor installieren (falls noch nicht geschehen)<br>
+  </li>
+  <li>Tor-Dienst starten:<br>
+    <code>sudo systemctl start tor</code>
+  </li>
+  <li>Mit StarShell verbinden:<br>
+    <code>torsocks nc laboqld6kynunyn2dvajjw2comasqixokmauutu5aqpwbwf3jbpzyeqd.onion 23</code>
+  </li>
+</ol>
+  </div>
+  
+
+  <h2>Quellcode</h2>
+  <p>Viele der Spiele in der ASCII Arcade stammen aus Open-Source-Projekten. Hier findest du einige der Originalquellen – viel Spaß beim Stöbern, Modden oder Lernen:</p>
+<ul>
+  <li><strong>Nethack</strong> – <a href="https://github.com/NetHack/NetHack" target="_blank" rel="noopener noreferrer">github.com/NetHack/NetHack</a></li>
+  <li><strong>Moon Buggy</strong> – <a href="https://github.com/seehuhn/moon-buggy" target="_blank" rel="noopener noreferrer">github.com/seehuhn/moon-buggy</a></li>
+  <li><strong>Bastet</strong> (Bastard Tetris) – <a href="https://github.com/fph/bastet" target="_blank" rel="noopener noreferrer">github.com/fph/bastet</a></li>
+  <li><strong>nsnake</strong> – <a href="https://github.com/alexdantas/nsnake" target="_blank" rel="noopener noreferrer">github.com/alexdantas/nsnake</a></li>
+  <li><strong>nInvaders</strong> – <a href="https://github.com/TheZ3ro/ninvaders" target="_blank" rel="noopener noreferrer">github.com/TheZ3ro/ninvaders</a></li>
+  <li><strong>2048 (Terminal-Version)</strong> – <a href="https://github.com/mevdschee/2048.c" target="_blank" rel="noopener noreferrer">github.com/mevdschee/2048.c</a></li>
+  <li><strong>Pacman4Console</strong> – <a href="https://github.com/YoctoForBeaglebone/pacman4console" target="_blank" rel="noopener noreferrer">github.com/YoctoForBeaglebone/pacman4console</a></li>
+  <li><strong>BSDGames</strong> – <a href="https://github.com/vattam/BSDGames" target="_blank" rel="noopener noreferrer">github.com/vattam/BSDGames</a></li>
+  <li><strong>StarShell</strong> – <a href="https://github.com/puxplaying/starshell" target="_blank" rel="noopener noreferrer">github.com/puxplaying/starshell</a></li>
+</ul>
+
+  <h2>Kontakt</h2>
+  <p>
+    💬 Fragen, Feedback oder coole Spieltipps?<br>
+    Schick mir einfach eine Nachricht – entweder per <strong>E-Mail an <a href="mailto:sheepfreak@disroot.org"><code>sheepfreak@disroot.org</code></strong></a> oder über <a href="https://signal.me/#eu/lse0aSD7KiL_c_5Qi1UkCMblsO8svUMRi3ObepCqKASAAZq_zeBIU6FI_6R5apyD" target="_blank" rel="noopener"><strong>Signal</strong></a>.<br>
+    Ich freue mich besonders über schlanke Retro-Games, denn der Raspberry Pi 1 ist… sagen wir mal: <em>leistungsbescheiden</em>
+</p>
+
+</body>
+</html>
+

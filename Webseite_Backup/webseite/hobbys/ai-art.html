@@ -1,0 +1,12 @@
+<h1>Wenn Algorithmen träumen</h1>
+
+<p>AI-Art ist eine faszinierende Form der digitalen Kunst, die mithilfe von Künstlicher Intelligenz – etwa durch Tools wie Stable Diffusion – erzeugt wird. Man beschreibt der KI, was man sehen möchte, und sie verwandelt diese Beschreibung in ein Bild. Oft kommen dabei überraschend kreative, manchmal sogar richtig surreale Ergebnisse heraus – genau das macht den Reiz für mich aus.</p>
+
+<p>Ich finde es unglaublich spannend, mit Stable Diffusion zu experimentieren. Dabei beschränke ich mich nicht nur auf einfache Prompts: Ich probiere ständig neue Modelle von Civitai aus, spiele mit VAEs (Variational Autoencoders) und LoRAs (Low-Rank Adaptations), um den Stil und die Ausdruckskraft meiner Bilder noch gezielter beeinflussen zu können.</p>
+
+<p>Und das alles läuft lokal auf meinem System – einer AMD Radeon RX 6700 XT mit ROCm-Unterstützung unter Linux, natürlich betrieben mit dem freien <code>amdgpu</code>-Treiber. Kein Cloud-Gedöns, keine Blackbox, und vor allem: <strong>keine Zensur.</strong> Ich entscheide selbst, was ich rendern will – ohne Einschränkungen, ohne Filter, ohne jemandem Rechenschaft ablegen zu müssen. Die volle Kontrolle über jeden einzelnen Schritt im Prozess. Es fühlt sich an wie ein digitales Atelier, das ich mir selbst gebaut habe – nerdig, effizient und voll auf meine Bedürfnisse zugeschnitten.</p>
+
+<p>In der Galerie werden automatisch die neuesten Bilder aus meinem Pixelfed-Profil angezeigt – ganz ohne manuelles Hochladen. Dank der Pixelfed-API und einem Python-Script werden alle Beiträge mit dem Hashtag #stablediffusion direkt gespiegelt und sauber eingebunden. Das Script läuft vollautomatisch im Hintergrund und sorgt dafür, dass die Galerie immer auf dem neuesten Stand bleibt. Sollte die API nicht genügend Beiträge liefern können, da sie nur eine begrenzte Anzahl an Posts ausgibt, wird die Galerie automatisch mit zufälligen Bildern aus einem lokalen Ordner aufgefüllt, sodass immer ausreichend Bilder angezeigt werden.</p>
+
+<div id="pixelfed-gallery" class="galerie"></div>
+

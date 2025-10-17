@@ -1,0 +1,64 @@
+<h2>Workshop zu KI, Programmierung, Linux, Datenschutz und Social Media</h2>
+
+<p>In diesem praxisorientierten Workshop erhalten Jugendliche einen Einblick in die Welt der Künstlichen Intelligenz (KI), Programmierung, Linux und Datenschutz. Zu Beginn setzen die Teilnehmer ein Linux-System in einer virtuellen Maschine (VM) auf und lernen grundlegende Programmierkonzepte mithilfe von Scratch. So tauchen sie spielerisch und intuitiv in die Welt der Programmierung ein.</p>
+
+<p>Anschließend arbeiten die Jugendlichen an einem praktischen KI-Projekt, das innerhalb der VM läuft. Dabei setzen sie drei von fünf verfügbaren KI-Modellen ein:</p>
+<ul>
+   <li><strong>BLIP</strong> für Bilderkennung</li> 
+   <li><strong>DistilBERT</strong> für Textverarbeitung und Sentimentanalyse</li>
+   <li><strong>GPT-2</strong> für Textgenerierung</li>
+   <li><strong>EasyOCR</strong> für Texterkennung</li>
+   <li><strong>Real-ESRGAN</strong> für Bildverbesserung</li>
+</ul>
+<p>Die Teilnehmer haben die Möglichkeit, diese Modelle auszuwählen und in ihr Projekt zu integrieren. Ziel ist es, dass sie in der Lage sind, einfache Prompts zu formulieren, mit denen sie GPT-4 (über Duck.AI) nutzen, um Backend (Python) und Frontend (HTML, CSS, Javascript) automatisch zu generieren.</p>
+
+<p>Das Projekt basiert ausschließlich auf Open-Source-Software, sodass die Jugendlichen mit frei verfügbaren Tools und Technologien arbeiten können. Sie erhalten einen praktischen Einblick in die Funktionsweise dieser Technologien und lernen, wie sie diese für ihre eigenen Projekte schnell und effizient nutzen können.</p>
+
+<p>Zusätzlich zum technischen Wissen lernen die Teilnehmenden, wie sie GitHub-Projekte klonen, Abhängigkeiten mit APT verwalten und Verschlüsselungstechniken wie OTR anwenden. Der sichere Umgang mit Tor ist ebenfalls Bestandteil des Programms, ebenso wie ein Vortrag zu Social Media und Datenschutz, bei dem auch sichere Kommunikation thematisiert wird.</p>
+
+<p>Die Teilnehmer haben die Möglichkeit, in kleinen Gruppen an Aufgaben zu arbeiten, was ihre Teamarbeit und Problemlösungsfähigkeiten fördert. Durch die Erstellung einer eigenen VM und das Arbeiten an einem realitätsnahen Projekt erhalten sie nicht nur wertvolle technische Kenntnisse, sondern auch einen praktischen, greifbaren Beweis ihrer Arbeit, den sie später als Referenz bei Bewerbungsgesprächen, etwa für eine Lehrstelle, nutzen können.</p>
+
+<p>Abgerundet wird das Programm durch einen Crashkurs in HTML & CSS, unterstützt durch Duck.AI, eine Einführung in PIP sowie eine Einheit zu Fake News und deren Entlarvung mit Fact-Checking-Plattformen wie Mimikama. Zudem werden datenschutzfreundliche Alternativen zu Big-Tech-Diensten vorgestellt, darunter Signal für sichere Kommunikation, das Fediverse als dezentrale Social-Media-Plattform und F-Droid als alternative App-Quelle für freie Software.</p>
+<h2>Mein KI-Projekt auf minimaler Hardware</h2>
+<p>Mein KI-Projekt zeigt, dass KI nicht zwingend leistungsstarke Hardware benötigt, um sinnvoll eingesetzt zu werden – sondern mit cleverer Architektur auch auf schwacher Hardware möglich ist. Die gesamte Anwendung läuft auf meinem alten Notebook mit einem <a href="https://www.intel.de/content/www/de/de/products/sku/87258/intel-celeron-processor-n3150-2m-cache-up-to-2-08-ghz/specifications.html" target="_blank">Intel N3150</a> (4 × 1,6 GHz) und nur 4 GB RAM.</p>
+<p>Um die begrenzten Ressourcen optimal zu nutzen, laufen die fünf KI-Modelle in einer isolierten Umgebung. Drei davon – BLIP, DistilBERT und GPT-2 – werden innerhalb einer virtuellen Maschine betrieben. Jedes Modell läuft in einer eigenen Python-Umgebung, wodurch Konflikte zwischen Abhängigkeiten vermieden werden. Die VM selbst hat nur 3 GB RAM zur Verfügung, dennoch laufen die Modelle gleichzeitig und liefern brauchbare Ergebnisse.</p>
+<p>Real-ESRGAN stellt eine besondere Herausforderung dar. Da es Vulkan-Unterstützung benötigt, kann es nicht in der VM ausgeführt werden. Stattdessen läuft es direkt auf dem Notebook außerhalb der VM. Die Flask-App übernimmt dabei die Steuerung: Sie baut eine SSH-Verbindung zum Hostsystem auf, überträgt Bilder per SFTP und startet die Verarbeitung mit Real-ESRGAN. Sobald das Modell die Bilder verbessert hat, werden sie zurück in die Weboberfläche geladen.</p>
+
+<p>Das Webinterface wurde mit Bootstrap gestaltet, um eine einfache und intuitive Nutzung zu ermöglichen. Leider kann EasyOCR nicht verwendet werden, da der Prozessor kein AVX unterstützt – eine Einschränkung, die moderne Software oft als selbstverständlich voraussetzt.</p>
+
+<p>Trotz dieser technischen Hürden laufen alle anderen Modelle stabil und parallel auf der minimalistischen Hardware. Das Projekt zeigt eindrucksvoll, dass KI nicht zwingend High-End-GPUs erfordert – mit der richtigen Software-Architektur kann man selbst auf schwachen Geräten leistungsfähige KI-Systeme betreiben.</p> 
+<h3>Ressourcen</h3>
+<p><a href="./downloads/ITWorkshop.pdf" >Das Workshopkonzept (PDF)</a></p>
+<h3>Bilder zum Projekt</h3>	 
+<div class="galerie">
+   <div class="image-container">
+       <img src="grafiken/ki-projekt/Projekt_1.png" onclick="zeigeLightbox('grafiken/ki-projekt/Projekt_1.png')">
+   </div>
+   <div class="image-container">
+       <img src="grafiken/ki-projekt/Projekt_2.png" onclick="zeigeLightbox('grafiken/ki-projekt/Projekt_2.png')">
+   </div>
+   <div class="image-container">
+       <img src="grafiken/ki-projekt/Projekt_3.png" onclick="zeigeLightbox('grafiken/ki-projekt/Projekt_3.png')">
+   </div>
+   <div class="image-container">
+       <img src="grafiken/ki-projekt/Projekt_4.png" onclick="zeigeLightbox('grafiken/ki-projekt/Projekt_4.png')">
+   </div>
+   <div class="image-container">
+       <img src="grafiken/ki-projekt/Projekt_5.png" onclick="zeigeLightbox('grafiken/ki-projekt/Projekt_5.png')">
+   </div>
+</div>
+
+    
+<h3>Videos zum Projekt</h3>
+
+<div class="galerie">
+   <div class="image-container">
+     <video class="video-thumb" data-src="videos/kiprojekt-uebersicht.mp4" poster="videos/thumbs/kiprojekt-uebersicht.png"></video>
+   </div>
+   <div class="image-container">
+     <video class="video-thumb" data-src="videos/kiprojekt-realesrgan.mp4" poster="videos/thumbs/kiprojekt-realesrgan.png"></video>
+   </div>
+ </div>
+ 
+
+

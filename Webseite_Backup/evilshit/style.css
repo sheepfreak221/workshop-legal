@@ -1,0 +1,35 @@
+body {
+  background: black;
+  color: limegreen;
+  font-family: monospace;
+  padding: 2em;
+}
+
+a {
+  color: cyan;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  color: magenta;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  border: 1px dashed limegreen;
+  padding: 2em;
+  background: #111;
+}
+
+footer {
+  margin-top: 3em;
+  font-size: 0.8em;
+  color: gray;
+  border-top: 1px solid #333;
+  padding-top: 1em;
+}

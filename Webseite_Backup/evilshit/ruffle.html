@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ruffle Flash-Beispiel</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+    <h1>Ruffle Flash Demo</h1>
+    
+    <!-- Hier kommt das Flash-Spiel rein -->
+    <object type="application/x-shockwave-flash" data="age-of-war-2-public.swf" width="550" height="400">
+        <param name="movie" value="beispiel.swf" />
+        <p>Flash wird nicht unterstützt.</p>
+    </object>
+
+    <script>
+        // Ruffle initialisieren und automatisch alle Flash-Objekte ersetzen
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const objects = document.querySelectorAll("object[type='application/x-shockwave-flash']");
+            objects.forEach(obj => {
+                const rufflePlayer = ruffle.createPlayer();
+                obj.parentNode.replaceChild(rufflePlayer, obj);
+                rufflePlayer.load(obj.data);
+            });
+        });
+    </script>
+</body>
+</html>
